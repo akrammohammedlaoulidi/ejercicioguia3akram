@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int contador = 0;
+    char opcion;
+    
+    do {
+        printf("Presione 'b' para contar un servicio, 'q' para salir: ");
+        scanf(" %c", &opcion);
+        
+        switch(opcion) {
+            case 'b':
+                contador++;
+                printf("Servicio contado. Total: %d\n", contador);
+                break;
+            case 'q':
+                printf("Saliendo...\n");
+                break;
+            default:
+                printf("Opción inválida\n");
+        }
+    } while(opcion != 'q');
+    
+    return 0;
+}
